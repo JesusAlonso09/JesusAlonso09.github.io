@@ -1,0 +1,216 @@
+ /* RESET GENERAL */
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      text-decoration: none;
+      list-style: none;
+    }
+
+    body {
+      font-family: 'Trebuchet MS', sans-serif;
+      min-height: 500px;
+      background: linear-gradient(90deg, rgba(34, 199, 163, 0.5) 30%, rgb(63, 185, 124) 70%);
+      overflow-x: hidden;
+    }
+
+    /* CONTENEDOR PRINCIPAL */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    /* BLOQUES DE CONTENIDO */
+    .content-block {
+      width: 100%;
+    }
+
+    /* TEXTO */
+    .text {
+      font-size: 1.1em;
+      line-height: 1.6;
+      color: #000;
+      text-align: justify;
+      margin-top: 15px;
+    }
+
+    /* IMÁGENES RESPONSIVAS */
+    .img-responsive {
+      width: 100%;
+      height: auto;
+      display: block;
+      max-width: 800px;
+      margin: 0 auto;
+      border-radius: 8px;
+    }
+
+    /* LOGO */
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      background: linear-gradient(to top, rgb(110, 25, 25), rgb(0, 0, 0));
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* MENU */
+    .menu {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      background-color: transparent;
+      padding: 10px 20px;
+      position: relative;
+      z-index: 10;
+    }
+
+    /* ICONO DE MENÚ */
+    .menu-icono {
+      display: none;
+      cursor: pointer;
+    }
+    .menu-icono img {
+      width: 30px;
+      height: auto;
+    }
+
+    /* NAVBAR */
+    .navbar ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+      padding: 10px;
+    }
+
+   .navbar ul li a {
+  color: white;
+  font-weight: bold;
+  text-shadow: 0 0 8px rgba(255, 0, 0, 0.6); /* sombra roja glow */
+  transition: 0.3s;
+}
+
+    .navbar ul li a:hover {
+      color: #00ffc3;
+    }
+
+    /* Ocultar checkbox */
+    #menu-toggle {
+      display: none;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      /* Mostrar icono menú */
+      .menu-icono {
+        display: block;
+      }
+
+      /* Ocultar el navbar por defecto */
+      .navbar {
+        display: none;
+        width: 100%;
+      }
+
+      /* Mostrar navbar al activar checkbox */
+      #menu-toggle:checked + .menu-icono + .navbar {
+        display: block;
+      }
+
+      /* Cambiar estilo del ul para móvil */
+      .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+        margin-top: 10px;
+        background-color: #77d386;
+        border-radius: 5px;
+      }
+
+      /* Ajustes logo móvil */
+      .logo {
+        font-size: 1.2rem;
+      }
+
+      /* Ajustes contenedor móvil */
+      .container {
+        padding: 10px;
+      }
+
+      /* Ajustes texto móvil */
+      .text {
+        font-size: 1em;
+      }
+    }
+
+    /* FONDO ANIMADO */
+    .bg {
+      width: 100%;
+      height: 100vh;
+      background-size: 300% 300%;
+      background-image: linear-gradient(337deg, #082167 25%, #23a8af 65%, #f79838 80%, #ffcf65 95%);
+      animation: fondoAnimado 20s ease infinite;
+    }
+
+    @keyframes fondoAnimado {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    /* TITULOS */
+    h1 {
+      text-align: center;
+      width: fit-content;
+      background: linear-gradient(to top, black, navy);
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin: 20px auto;
+    }
+
+    /* SUBTITULOS */
+    h3 {
+      text-align: justify;
+      margin: 15px 0;
+    }
+
+    /* LISTAS */
+    li {
+      font-weight: 900;
+      font-size: 0.5cm;
+      margin-left: 2cm;
+      width: fit-content;
+      background: linear-gradient(to top, rgb(89, 117, 32), rgb(63, 16, 16));
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* ENLACES */
+    a {
+      color: inherit;
+    }
+    a:visited {
+      color: aliceblue;
+    }
+    a:active {
+      color: rgb(9, 116, 209);
+    }
+    a:link {
+      color: rgb(112, 21, 71);
+    }
+
